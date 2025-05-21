@@ -75,7 +75,10 @@ const fixBalancesTokens = {
     '0x4200000000000000000000000000000000000006': { coingeckoId: 'superseed-bridged-weth-superseed', decimals: 18, },
     '0xc316c8252b5f2176d0135ebb0999e99296998f2e': { coingeckoId: 'superseed-bridged-usdc-superseed', decimals: 6, },
     '0x1217BfE6c773EEC6cc4A38b5Dc45B92292B6E189': { coingeckoId: 'openusdt', decimals: 6, },
-  }
+  },
+  changcoin {
+    [ADDRESSES['null']]: { coingeckoId: :"changcoin", decimals: 18 }, // Native CTH
+  } 
 }
 
 ibcChains.forEach(chain => fixBalancesTokens[chain] = { ...ibcMappings, ...(fixBalancesTokens[chain] || {}) })
